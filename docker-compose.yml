@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  jobs_oscar_cootranshuila:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      image: docker.pkg.github.com/oscarruiz05/jobs-cootranshuila-front/frontend:latest
+      container_name: jobs_oscar_cootranshuila
+      networks:
+          - proxy
+networks:
+    proxy:
+        driver: bridge
+        name: proxy
+        external: true

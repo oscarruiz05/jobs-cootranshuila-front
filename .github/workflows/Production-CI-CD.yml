@@ -1,0 +1,49 @@
+on:
+  push:
+    branches:
+      - 'master'
+name: deploy Production
+env:
+  REGISTRY: docker.pkg.github.com
+  IMAGE_NAME: oscarruiz05/jobs-cootranshuila-front/frontend
+jobs:
+  build-and-push-frontend:
+    name: build and push frontend
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: chekout
+        uses: actions/checkout@v2
+      -
+        name: Login to github registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ secrets.NAME_GITHUB }}
+          password: ${{ secrets.TOKEN }}
+      -
+        name: Build and push github registry
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          context: .
+          file: Dockerfile
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest,${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.run_number }}
+
+  deploy:
+    needs: build-and-push-frontend
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: SSH into server
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.IP_PRODUCTION }}
+        username: ${{ secrets.USER_PRODUCTION }}
+        password: ${{ secrets.PSS_PRODUCTION }}
+        script: |
+          cd ${{ secrets.PATH_PRODUCTION }}
+          docker-compose pull
+          docker-compose up -d
