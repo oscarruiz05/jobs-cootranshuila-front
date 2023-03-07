@@ -2,7 +2,7 @@
     <div class="navbar-area">
         <!-- Menu For Mobile Device -->
         <div class="mobile-nav">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="@/assets/img/logos/logo-dark.png" class="logo">
             </a>
         </div>

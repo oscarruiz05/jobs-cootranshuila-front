@@ -3,15 +3,19 @@
         <footer class="footer-area pt-100 pb-70">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="footer-widget">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo.png" alt="logo">
+                                    <img src="@/assets/img/logos/logo-light.png" class="logo_foot" alt="logo">
                                 </a>
                             </div>
     
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna. Sed eiusmod tempor incididunt ut.</p>
+                            <p class="text_foot">
+                                Nuestra más alta prioridad es el cliente para quien tenemos nuestra mejor actitud de servicio, 
+                                el cliente es la razón de ser de nuestro trabajo; le servimos con gusto en forma amable y eficiente; 
+                                nuestro potencial mas valioso es nuestra gente y la capacidad de trabajar en equipo.
+                            </p>
     
                             <div class="footer-social">
                                 <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
@@ -22,7 +26,7 @@
                         </div>
                     </div>
     
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="footer-widget pl-60">
                             <h3>For Candidate</h3>
                             <ul>
@@ -66,7 +70,7 @@
                         </div>
                     </div>
     
-                    <div class="col-lg-3 col-sm-6">
+                    <!-- <div class="col-lg-3 col-sm-6">
                         <div class="footer-widget pl-60">
                             <h3>Quick Links</h3>
                             <ul>
@@ -108,9 +112,9 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
     
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-lg-4 col-sm-6">
                         <div class="footer-widget footer-info">
                             <h3>Information</h3>
                             <ul>
@@ -148,7 +152,7 @@
             </div>
         </footer>
         <div class="copyright-text text-center">
-            <p>Copyright &copy; {{year}} <a href="https://cootranshuila.com">Cootranshuila</a>. Todos los derechos reservados</p>
+            <p>Copyright &copy; {{year}} <a href="https://cootranshuila.com" target="_blank">Cootranshuila ltda</a>.</p>
         </div>
     </div>
 </template>
@@ -165,3 +169,15 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.footer-area::before{
+    background-image: url(@/assets/img/shape/footer.png);
+}
+.text_foot{
+    text-align: justify;
+}
+.logo_foot{
+    width: 15rem;
+}
+</style>

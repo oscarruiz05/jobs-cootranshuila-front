@@ -1,5 +1,9 @@
 <template>
     <div>
+		<!-- banner -->
+		<Banner/>
+
+
         <section class="categories-section pt-100 pb-70">
 			<div class="container">
 				<div class="section-title text-center">
@@ -91,9 +95,8 @@
 			</div>
 		</section>
 		<!-- Category Section End -->
-
 		<!-- Jobs Section Start -->
-		<section class="job-section pb-70">
+		<!-- <section class="job-section pb-70">
 			<div class="container">
 				<div class="section-title text-center">
 					<h2>Jobs You May Be Interested In</h2>
@@ -397,12 +400,15 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
     </div>
 </template>
 <script>
+import Banner from '@/components/home/Banner.vue';
 export default {
-    
+    components: {
+		Banner,
+	}
 }
 </script>
 <style></style>

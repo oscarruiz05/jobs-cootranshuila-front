@@ -1,7 +1,7 @@
 :root{
-    --primary: #00a039;
-    --text-nav: #3c4858;
-  }
+  --primary: #00a039;
+  --text-nav: #3c4858;
+}
 a.meanmenu-reveal {
   display: none;
 }

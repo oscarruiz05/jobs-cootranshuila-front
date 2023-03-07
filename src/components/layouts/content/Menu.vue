@@ -23,8 +23,7 @@
             </ul>
 
             <div class="other-option">
-                <a href="#" class="signup-btn">Sign Up</a>
-                <a href="#" class="signin-btn">Sign In</a>
+                <a href="#" class="signin-btn">Iniciar Sesión</a>
             </div>
         </div>
     </nav>
