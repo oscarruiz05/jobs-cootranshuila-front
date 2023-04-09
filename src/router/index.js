@@ -13,6 +13,30 @@ const routes = [
     name: 'home',
     component: () => import('@/views/Home.vue')
   },
+  {
+    path: '/nosotros',
+    name: 'about',
+    component: () => import('@/views/About.vue')
+  },
+  {
+    path: '/empleos',
+    name: 'jobs',
+    component: () => import('@/views/Job.vue')
+  },
+  {
+    path: '/contacto',
+    name: 'contact',
+    component: () => import('@/views/Contact.vue')
+  },
+  /* servicios */
+  {
+    name: 'tiquetes',
+    path: 'https://cootranshuila.com/'
+  },
+  {
+    name: 'especial',
+    path: 'https://cootranshuila.com/info/servicio-especial'
+  },
   /* dashboard */
   // {
   //   path: 'dashboard',

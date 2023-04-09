@@ -5,29 +5,29 @@ const mainMenu = [
     },
     {
         title: 'Nosotros',
-        route: 'nosotros',
+        route: 'about',
     },
     {
         title: 'Servicios',
         route: 'servicios',
         children: [
             {
-                title: 'servicio 1',
-                route: 'servicios1'
+                title: 'Tiquetes Online',
+                route: 'tiquetes'
             },
             {
-                title: 'servicio 2',
-                route: 'servicios2'
+                title: 'Servicio Especial',
+                route: 'especial'
             },
         ]
     },
     {
         title: 'Empleos',
-        route: '/empleos',
+        route: 'jobs',
     },
     {
         title: 'Contáctenos',
-        route: '/contacto',
+        route: 'contact',
     }
 ];
 
