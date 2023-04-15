@@ -24,6 +24,7 @@
 
             <div class="other-option">
                 <router-link to="login" class="signin-btn">Iniciar Sesión</router-link>
+                <!-- <router-link to="login" class="signin-btn close-btn">Cerrar Sesión</router-link> -->
             </div>
         </div>
     </nav>
@@ -39,3 +40,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.close-btn{
+    background: #f01010 !important;
+}
+</style>
