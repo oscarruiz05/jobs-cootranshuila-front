@@ -6,7 +6,7 @@
                 <div class="row">
                     <!-- menu -->
                     <div class="col-md-4">
-                        <div class="account-information">
+                        <div class="account-information sticky-bar">
                             <div class="profile-thumb">
                                 <img src="@/assets/img/account.jpg" alt="account holder image">
                                 <h3>John Smith</h3>

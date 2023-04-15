@@ -146,8 +146,4 @@ export default {
 </script>
 
 <style scoped>
-.resume-area{
-    -webkit-box-shadow: 0;
-    box-shadow: 0;
-}
 </style>
