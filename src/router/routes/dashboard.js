@@ -4,4 +4,9 @@ export const Dashboard = [
         name: 'perfil',
         component: () => import('@/views/Admin/Profile.vue'),
     },
+    {
+        path: 'resumen',
+        name: 'resumen',
+        component: () => import('@/views/Admin/Resume.vue'),
+    },
 ]

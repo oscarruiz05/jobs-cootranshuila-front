@@ -15,52 +15,34 @@
 
                             <ul>
                                 <li>
-                                    <a href="#" class="active">
+                                    <router-link :to="{name: 'dashboard'}" class="active">
                                         <i class='bx bx-user'></i>
-                                        My Profile
-                                    </a>
+                                        Perfil
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <a href="resume.html">
+                                    <router-link :to="{name: 'resumen'}">
                                         <i class='bx bxs-file-doc'></i>
-                                        My Resume
-                                    </a>
+                                        Hoja de Vida
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <router-link :to="{name: 'dashboard'}">
                                         <i class='bx bx-briefcase'></i>
-                                        Applied Job
-                                    </a>
+                                        Aplicaciones
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <i class='bx bx-envelope'></i>
-                                        Messages
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class='bx bx-heart'></i>
-                                        Saved Jobs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
+                                    <router-link :to="{name: 'dashboard'}">
                                         <i class='bx bx-lock-alt' ></i>
-                                        Change Password
-                                    </a>
+                                        Cambiar Contraseña
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <i class='bx bx-coffee-togo'></i>
-                                        Delete Account
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
+                                    <router-link :to="{name: 'dashboard'}">
                                         <i class='bx bx-log-out'></i>
-                                        Log Out
-                                    </a>
+                                        Cerrar Sesión
+                                    </router-link>
                                 </li>
                             </ul>
                         </div>
