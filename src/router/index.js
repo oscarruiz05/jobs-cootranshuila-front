@@ -37,6 +37,17 @@ const routes = [
     name: 'especial',
     path: 'https://cootranshuila.com/info/servicio-especial'
   },
+  /* auth */
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/auth/Login.vue')
+  },
+  {
+    path: '/registro',
+    name: 'register',
+    component: () => import('@/views/auth/Register.vue')
+  },
   /* dashboard */
   // {
   //   path: 'dashboard',

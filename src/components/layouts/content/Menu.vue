@@ -23,7 +23,7 @@
             </ul>
 
             <div class="other-option">
-                <a href="#" class="signin-btn">Iniciar Sesión</a>
+                <router-link to="login" class="signin-btn">Iniciar Sesión</router-link>
             </div>
         </div>
     </nav>
