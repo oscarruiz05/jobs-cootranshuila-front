@@ -4,18 +4,10 @@ import VueRouter from 'vue-router'
 /* routes */
 import { Dashboard } from './routes/dashboard'
 
-const component = {
-  template: `
-  <div>
-    <router-view></router-view>
-  <div/>
-  `
-};
-
-
 Vue.use(VueRouter)
 
 const routes = [
+  /* web */
   {
     path: '/',
     name: 'home',
@@ -57,22 +49,13 @@ const routes = [
     component: () => import('@/views/auth/Register.vue')
   },
   /* dashboard */
-  // {
-  //   path: 'dashboard',
-  //   name: 'dashboard',
-  //   component: Dashboard
-  // },
   {
     path: '/dashboard/',
     name: 'dashboard',
     redirect: {name: 'perfil'},
     component: () => import('@/views/Admin/Dashboard.vue'),
     children: [
-      {
-        path: 'perfil',
-        name: 'perfil',
-        component: () => import('@/views/Admin/Profile.vue'),
-      },
+      ...Dashboard
     ]
   },
 ]
