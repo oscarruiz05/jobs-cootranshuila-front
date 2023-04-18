@@ -2,12 +2,12 @@
   <section class="page-title title-bg1">
     <div class="d-table">
       <div class="d-table-cell">
-        <h2>About Us</h2>
+        <h2>{{title}}</h2>
         <ul>
           <li>
-            <a href="index.html">Home</a>
+            <routerLink to="/">Home</routerLink>
           </li>
-          <li>About Us</li>
+          <li>{{title}}</li>
         </ul>
       </div>
     </div>
@@ -21,6 +21,9 @@
 
 <script>
 export default {
+  props: {
+    title: String
+  },
   data() {
     return {};
   },

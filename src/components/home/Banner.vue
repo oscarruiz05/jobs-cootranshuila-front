@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="col-md-4">
-                    <button type="submit" class="find-btn">
+                    <button @click="submit" class="find-btn">
                         Buscar
                         <i class="bx bx-search"></i>
                     </button>
@@ -60,6 +60,10 @@ export default {
         async getSedes(){
             const response = await Axios.getAgencies();
             this.sedes = response;
+        },
+        submit(){
+            console.log('redireccionando')
+            this.$router.push({ name: 'jobs' });
         }
     },
     data(){

@@ -2,7 +2,7 @@ import axios from "axios";
 
 const getCategories = () => {
     return new Promise((resolve, reject) => {
-        axios.get(`${process.env.VUE_APP_API_URL}/categories`)
+        axios.get(`${process.env.VUE_APP_API_URL}/categories?populate=*`)
         .then(resp => {
             resolve(resp.data.data)
         })
@@ -14,7 +14,19 @@ const getCategories = () => {
 
 const getAgencies = () => {
     return new Promise((resolve, reject) => {
-        axios.get(`${process.env.VUE_APP_API_URL}/agencies`)
+        axios.get(`${process.env.VUE_APP_API_URL}/agencies?populate=*`)
+        .then(resp => {
+            resolve(resp.data.data)
+        })
+        .catch(error => {
+            reject(error)
+        })
+    })
+}
+
+const getJobs = () => {
+    return new Promise((resolve, reject) => {
+        axios.get(`${process.env.VUE_APP_API_URL}/jobs?populate=*`)
         .then(resp => {
             resolve(resp.data.data)
         })
@@ -27,6 +39,7 @@ const getAgencies = () => {
 export default {
     getCategories,
     getAgencies,
+    getJobs,
 }
 
 // const geToken = (client_id, client_secret) => {

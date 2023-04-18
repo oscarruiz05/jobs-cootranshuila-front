@@ -1,392 +1,56 @@
 <template>
     <div>
-        <BannerTop/>
+        <BannerTop :title="'Empleos'"/>
 
         <!-- Job Section End -->   
         <section class="job-style-two job-list-section pt-100 pb-70">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2>Jobs You May Be Interested In</h2>
+                    <h2>Nuestras Vacantes</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12" v-for="item in jobs">
                         <div class="job-card-two">
                             <div class="row align-items-center">
                                 <div class="col-md-1">
                                     <div class="company-logo">
-                                        <a href="job-details.html"></a>
-                                        <img src="assets/img/company-logo/1.png" alt="logo">
+                                        <a href="#"></a>
+                                        <img src="@/assets/img/company-logo/1.png" alt="logo">
                                     </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="job-info">
                                         <h3>
-                                            <a href="job-details.html">Web Designer, Graphic Designer, UI/UX Designer</a>
+                                            <a href="#">{{item.attributes.name}}</a>
                                         </h3>
                                         <ul>                                          
                                             <li>
                                                 <i class='bx bx-briefcase' ></i>
-                                                Graphics Designer
+                                                {{item.attributes.category.data.attributes.name}}
                                             </li>
                                             <li>
                                                 <i class='bx bx-briefcase' ></i>
-                                                $35000-$38000
+                                                ${{item.attributes.salary}}
                                             </li>
                                             <li>
                                                 <i class='bx bx-location-plus'></i>
-                                                Wellesley Rd, London
+                                                {{item.attributes.agency_id.data.attributes.name}}
                                             </li>
                                             <li>
                                                 <i class='bx bx-stopwatch' ></i>
-                                                9 days ago
+                                                {{formatDate(item.attributes.publishedAt)}}
                                             </li>
                                         </ul>
 
-                                        <span>Full Time</span>
+                                        <span>{{item.attributes.job_type}}</span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="job-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <div class="company-logo">
-                                        <a href="job-details.html">
-                                            <img src="assets/img/company-logo/2.png" alt="logo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="job-info">
-                                        <h3>
-                                            <a href="job-details.html">Website Developer & Software Developer</a>
-                                        </h3>
-                                        <ul>                                          
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                Web Developer
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                $3000-$8000
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-location-plus'></i>
-                                                Garden Road, UK
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-stopwatch' ></i>
-                                                5 days ago
-                                            </li>
-                                        </ul>
-
-                                        <span>Full Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="job-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <div class="company-logo">
-                                        <a href="job-details.html">
-                                            <img src="assets/img/company-logo/3.png" alt="logo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="job-info">
-                                        <h3>
-                                            <a href="job-details.html">Application Developer & Web Designer</a>
-                                        </h3>
-                                        <ul>                                          
-                                            <li>
-                                                <i class='bx bx-briefcase'></i>
-                                                App Developer
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-briefcase'></i>
-                                                $3000-$4000
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-location-plus'></i>
-                                                State City, USA
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-stopwatch' ></i>
-                                                8 days ago
-                                            </li>
-                                        </ul>
-
-                                        <span>Part-Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="job-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <div class="company-logo">
-                                        <a href="job-details.html">
-                                            <img src="assets/img/company-logo/4.png" alt="logo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="job-info">
-                                        <h3>
-                                            <a href="job-details.html">Frontend & Backend Developer</a>
-                                        </h3>
-                                        <ul>                                          
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                Web Developer
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                $5000-$8000
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-location-plus'></i>
-                                                Drive Post NY 676
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-stopwatch' ></i>
-                                                1 days ago
-                                            </li>
-                                        </ul>
-
-                                        <span>Full Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="job-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <div class="company-logo">
-                                        <a href="job-details.html">
-                                            <img src="assets/img/company-logo/5.png" alt="logo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="job-info">
-                                        <h3>
-                                            <a href="job-details.html">IT Department & Manager</a>
-                                        </h3>
-                                        <ul>                                          
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                Manager
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                $35000-$38000
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-location-plus'></i>
-                                                Wellesley Rd, London
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-stopwatch' ></i>
-                                                7 days ago
-                                            </li>
-                                        </ul>
-
-                                        <span>Full Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="job-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <div class="company-logo">
-                                        <a href="job-details.html">
-                                            <img src="assets/img/company-logo/6.png" alt="logo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="job-info">
-                                        <h3>
-                                            <a href="job-details.html">Office Assistant</a>
-                                        </h3>
-                                        <ul>                                          
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                Manager
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                $10000-$12000
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-location-plus'></i>
-                                                Wellesley Rd, London
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-stopwatch' ></i>
-                                                9 days ago
-                                            </li>
-                                        </ul>
-
-                                        <span>Full Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="job-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <div class="company-logo">
-                                        <a href="job-details.html">
-                                            <img src="assets/img/company-logo/1.png" alt="logo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="job-info">
-                                        <h3>
-                                            <a href="job-details.html">Accountants</a>
-                                        </h3>
-                                        <ul>                                          
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                Finance
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-briefcase' ></i>
-                                                $5000-$8000
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-location-plus'></i>
-                                                Green View, Australia
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-stopwatch' ></i>
-                                                2 days ago
-                                            </li>
-                                        </ul>
-
-                                        <span>Full Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="job-card-two">
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <div class="company-logo">
-                                        <a href="job-details.html">
-                                            <img src="assets/img/company-logo/2.png" alt="logo">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="job-info">
-                                        <h3>
-                                            <a href="job-details.html">Budget Analysts</a>
-                                        </h3>
-                                        <ul>                                          
-                                            <li>
-                                                <i class='bx bx-briefcase'></i>
-                                                Data Science
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-briefcase'></i>
-                                                $3000-$8000
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-location-plus'></i>
-                                                Park Road, UK
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-stopwatch'></i>
-                                                3 days ago
-                                            </li>
-                                        </ul>
-
-                                        <span>Full Time</span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="theme-btn text-end">
-                                        <a href="job-details.html" class="default-btn">
-                                            Browse Job
+                                        <a href="/" class="default-btn">
+                                            Aplicar
                                         </a>
                                     </div>
                                 </div>
@@ -395,7 +59,7 @@
                     </div>
                 </div>
 
-                <nav aria-label="Page navigation example">
+                <!-- <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
@@ -411,22 +75,37 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
             </div>
         </section>
-        <!-- Job Section End -->  
     </div>
 </template>
 
 <script>
 import BannerTop from '@/components/layouts/content/BannerTop.vue';
+import Axios from '@/services/index';
+import moment from 'moment';
 export default {
     components: {
         BannerTop
     },
+    methods: {
+        async getJobs(){
+			const response = await Axios.getJobs();
+			this.jobs = response;
+		},
+        formatDate(date){
+            const splitDate = date.split('T');
+            moment.locale('es-co');
+            return moment(splitDate[0]).format('LL');
+        },
+    },
+    mounted(){
+        this.getJobs();
+    },
     data() {
         return {
-            
+            jobs: [],
         };
     }
 };

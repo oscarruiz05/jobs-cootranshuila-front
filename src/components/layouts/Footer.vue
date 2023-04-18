@@ -18,110 +18,53 @@
                             </p>
     
                             <div class="footer-social">
-                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
-                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
-                                <a href="#" target="_blank"><i class='bx bxl-pinterest-alt'></i></a>
-                                <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                <a href="https://www.facebook.com/CootranshuilaLTDA" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                <a href="https://twitter.com/Cootranshuila" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                <a href="https://www.linkedin.com/company/cootranshuila/about/" target="_blank"><i class='bx bxl-linkedin'></i></a>
                             </div>
                         </div>
                     </div>
     
                     <div class="col-lg-4 col-sm-6">
                         <div class="footer-widget pl-60">
-                            <h3>For Candidate</h3>
+                            <h3>Elaces de interes</h3>
                             <ul>
                                 <li>
-                                    <a href="job-grid.html">
+                                    <routerLink :to="{name: 'jobs'}">
                                         <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Browse Jobs
-                                    </a>
+                                        Empleos
+                                    </routerLink>
                                 </li>
                                 <li>
-                                    <a href="account.html">
+                                    <routerLink :to="{name: 'perfil'}">
                                         <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Account
-                                    </a>
+                                        Perfil
+                                    </routerLink>
                                 </li>
                                 <li>
-                                    <a href="catagories.html">
+                                    <routerLink :to="{name: 'about'}">
                                         <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Browse Categories
-                                    </a>
+                                        Nosotros
+                                    </routerLink>
                                 </li>
                                 <li>
-                                    <a href="resume.html">
+                                    <a href="https://cootranshuila.com/" target="_blank">
                                         <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Resume
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="job-list.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Job List
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="sign-up.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Sign Up
+                                        Pagina Web
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
     
-                    <!-- <div class="col-lg-3 col-sm-6">
-                        <div class="footer-widget pl-60">
-                            <h3>Quick Links</h3>
-                            <ul>
-                                <li>
-                                    <a href="index.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="about.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        About
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="faq.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        FAQ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Pricing
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="privacy.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Privacy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">
-                                        <i class='bx bx-chevrons-right bx-tada'></i>
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
-    
                     <div class="col-lg-4 col-sm-6">
                         <div class="footer-widget footer-info">
-                            <h3>Information</h3>
+                            <h3>información</h3>
                             <ul>
                                 <li>
                                     <span>
                                         <i class='bx bxs-phone'></i>
-                                        Phone:
+                                        telefono:
                                     </span>
                                     <a href="tel:882569756">
                                         +101 984 754
@@ -131,19 +74,19 @@
                                 <li>
                                     <span>
                                         <i class='bx bxs-envelope'></i>
-                                        Email:
+                                        Correo:
                                     </span>
-                                    <a href="mailto:info@jovie.com">
-                                        info@jovie.com
+                                    <a href="mailto:clientes@cootranshuila.com">
+                                        clientes@cootranshuila.com
                                     </a>
                                 </li>
     
                                 <li>
                                     <span>
                                         <i class='bx bx-location-plus'></i>
-                                        Address:
+                                        Dirección:
                                     </span>
-                                    123, Denver, USA
+                                    Av. 26 # 4 - 82, Neiva - Huila
                                 </li>
                             </ul>
                         </div>
@@ -158,15 +101,18 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
-    created(){
+    created() {
         this.year = new Date().getFullYear();
     },
-    data(){
-        return{
-            year: ''
-        }
-    }
+    data() {
+        return {
+            year: ""
+        };
+    },
+    components: { RouterLink }
 }
 </script>
 

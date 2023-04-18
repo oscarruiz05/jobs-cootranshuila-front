@@ -1,6 +1,6 @@
 <template>
     <div>
-        <BannerTop/>
+        <BannerTop :title="'Contácto'"/>
 
         <!-- Contact Section Start -->
         <div class="contact-card-section ptb-100">
