@@ -2,98 +2,28 @@
     <div>
 		<!-- banner -->
 		<Banner/>
-
+		<!-- categorias -->
         <section class="categories-section pt-100 pb-70">
 			<div class="container">
 				<div class="section-title text-center">
-					<h2>Choose Your Category</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
+					<h2>Selecciona tu categoria</h2>
+					<p>
+
+					</p>
 				</div>
-
 				<div class="row">
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<a href="job-list.html">
+					<div class="col-lg-3 col-md-4 col-sm-6" v-for="item in categories">
+						<routerLink to="/empleos">
 							<div class="category-card">
-								<i class='flaticon-accounting'></i>
-								<h3>Accountancy</h3>
-								<p>301 open position</p>
+								<i :class='item.attributes.icon'></i>
+								<h3>{{item.attributes.name}}</h3>
+								<p>Ver empleos</p>
 							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<a href="job-list.html">
-							<div class="category-card">
-								<i class='flaticon-graduation-cap'></i>
-								<h3>Education</h3>
-								<p>210 open position</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<a href="job-list.html">
-							<div class="category-card">
-								<i class='flaticon-wrench-and-screwdriver-in-cross'></i>
-								<h3>Automotive Jobs</h3>
-								<p>281 open position</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<a href="job-list.html">
-							<div class="category-card">
-								<i class='flaticon-consultation'></i>
-								<h3>Business</h3>
-								<p>122 open position</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<a href="job-list.html">
-							<div class="category-card">
-								<i class='flaticon-heart'></i>
-								<h3>Health Care</h3>
-								<p>335 open position</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-3  col-md-4 col-sm-6">
-						<a href="job-list.html">
-							<div class="category-card">
-								<i class='flaticon-computer'></i>
-								<h3>IT & Agency</h3>
-								<p>401 open position</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-3  col-md-4 col-sm-6 offset-md-2 offset-lg-0">
-						<a href="job-list.html">
-							<div class="category-card">
-								<i class='flaticon-worker'></i>
-								<h3>Engineering</h3>
-								<p>100 open position</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6">
-						<a href="job-list.html">
-							<div class="category-card">
-								<i class='flaticon-auction'></i>
-								<h3>Legal</h3>
-								<p>201 open position</p>
-							</div>
-						</a>
+						</routerLink>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- Category Section End -->
 		
 		<!-- Way To Use Section Start -->
 		<section class="use-section pt-100 pb-70">
@@ -134,7 +64,7 @@
 		</section>
 		<!-- Way To Use Section End -->
 
-		<!-- Companies Section Start -->
+		<!-- sedes -->
 		<section class="company-section pt-100 pb-70">
 			<div class="container">
 				<div class="section-title text-center">
@@ -145,7 +75,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-lg-3 col-sm-6" v-for="item in sedes">
+					<div class="col-lg-3 col-sm-6" v-for="item in agencies">
 						<div class="company-card">
 							<div class="company-logo">
 								<a href="/">
@@ -153,33 +83,47 @@
 								</a>
 							</div>
 							<div class="company-text">
-								<h3>{{item.name}}</h3>
+								<h3>{{item.attributes.name}}</h3>
 								<p>
 									<i class='bx bx-location-plus'></i>
-									{{item.address}}
+									{{item.attributes.Address}}
 								</p>
-								<a href="/" class="company-btn">
-									{{item.cant}} Vacantes
-								</a>
+								<routerLink to="/empleos" class="company-btn">
+									Ver empleos
+								</routerLink>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- Companies Section End -->
     </div>
 </template>
 <script>
 import Banner from '@/components/home/Banner.vue';
-import sedes from '@/data/sedes';
+import Axios from '@/services/index';
 export default {
     components: {
 		Banner,
 	},
+	mounted(){
+		this.getCategories();
+		this.getAgencies();
+	},
+	methods: {
+		async getCategories(){
+			const response = await Axios.getCategories();
+			this.categories = response;
+		},
+		async getAgencies(){
+			const response = await Axios.getAgencies();
+			this.agencies = response;
+		},
+	},
 	data(){
 		return{
-			sedes,
+			categories: [],
+			agencies: [],
 		}
 	}
 }

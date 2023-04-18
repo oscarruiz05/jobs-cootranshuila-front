@@ -11,51 +11,68 @@
                 <div class="row">
                     <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Keyword:</label>
+                        <label for="exampleInputEmail1">Trabajo:</label>
                         <input
                         type="text"
                         class="form-control"
                         id="exampleInputEmail1"
-                        placeholder="Job Title"
+                        placeholder="Escriba el trabajo"
+                        v-model="query.job"
                         />
                     </div>
                     </div>
 
                     <div class="col-md-4">
                     <div class="form-group">
-                        <label for="exampleInputEmail2">Location:</label>
-                        <input
-                        type="text"
-                        class="form-control"
-                        id="exampleInputEmail2"
-                        placeholder="City or State"
-                        />
+                        <label for="selectSede">Sede:</label>
+                        <select id="selectSede" class="form-control" v-model="query.sede">
+                            <option value="">Seleccione..</option>
+                            <option v-for="item in sedes" :value="item.id">
+                                {{item.attributes.name}}
+                            </option>
+                        </select>
                     </div>
                     </div>
 
                     <div class="col-md-4">
                     <button type="submit" class="find-btn">
-                        Find A Job
+                        Buscar
                         <i class="bx bx-search"></i>
                     </button>
                     </div>
                 </div>
                 </form>
-
-                <ul class="keyword">
-                <li>Trending Keywords:</li>
-                <li><a href="#">Automotive,</a></li>
-                <li><a href="#">Education,</a></li>
-                <li><a href="#">Health</a></li>
-                <li>and</li>
-                <li><a href="#">Care Engineering</a></li>
-                </ul>
             </div>
             </div>
         </div>
         </div>
     </div>
 </template>
+
+<script>
+import Axios from '@/services/index';
+
+export default {
+    mounted() {
+        this.getSedes();
+    },
+    methods: {
+        async getSedes(){
+            const response = await Axios.getAgencies();
+            this.sedes = response;
+        }
+    },
+    data(){
+        return {
+            sedes: [],
+            query: {
+                job: null,
+                sede: null
+            }
+        }
+    }
+}
+</script>
 
 
 <style scoped>
