@@ -12,21 +12,19 @@
                                 <h2>Nuestra Empresa</h2>
                             </div>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Consectetur adipiscing elit.
+                            <p>
+                                Nuestra más alta prioridad es el cliente para quien tenemos nuestra mejor actitud de servicio, el cliente es la razón de ser de nuestro trabajo; le servimos con gusto en forma amable y eficiente; nuestro potencial mas valioso es nuestra gente y la capacidad de trabajar en equipo. Consideramos, atendemos y valoramos a los demás, hacemos un esfuerzo colectivo permanente para el logro de los objetivos comunes. Desarrollamos la capacidad de escuchar, reconocer y optimizar nuestras fortalezas y limitaciones para generar un proceso de aprendizaje continuo. Nuestra mente esta abierta al cambio y la innovación permanente. Estamos en capacidad de adaptarnos a nuevas condiciones y retos. Tenemos la habilidad para implementar, estipular y generar nuevas ideas a fin de obtener más y mejores servicios. Nuestro compromiso es irreprochable y transparente, actuamos con claridad dentro de los principio morales y éticos. Somos coherentes dentro de lo que decimos, pensamos y hacemos, manejamos con responsabilidad la información y recursos que nos han sido confiados. Construimos relaciones de confianza entre nosotros y nuestros clientes.
                             </p>
 
                             <div class="theme-btn">
-                                <a href="#" class="default-btn" target="_blank">Mas información</a>
+                                <a href="https://cootranshuila.com/nuestra-empresa" class="default-btn" target="_blank">Mas información</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-5">
                         <div class="grow-img">
-                            <img src="@/assets/img/grow-img.jpg" alt="grow image">
+                            <img src="@/assets/img/LTDA.jpg" alt="grow image">
                         </div>
                     </div>
                 </div>

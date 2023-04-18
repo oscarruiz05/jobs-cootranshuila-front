@@ -1,5 +1,5 @@
 <template>
-    <div class="banner-section" style="background-image: url('@/assets/img/banner/1.jpg') center cover;">
+    <div class="banner-section">
         <div class="d-table">
         <div class="d-table-cell">
             <div class="container">
@@ -81,7 +81,7 @@ export default {
 
 <style scoped>
 .banner-section{
-    background-image: url(@/assets/img/banner/1.jpg);
+    background-image: url(@/assets/img/banner/banner.jpg);
     background-position: center center;
     background-size: cover;
 }

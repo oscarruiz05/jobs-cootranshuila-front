@@ -30,4 +30,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.page-title.title-bg1{
+  background-image: url(@/assets/img/banner/banner.jpg);
+}
+</style>

@@ -17,7 +17,7 @@
                                 <div class="col-md-1">
                                     <div class="company-logo">
                                         <a href="#"></a>
-                                        <img src="@/assets/img/company-logo/1.png" alt="logo">
+                                        <img src="@/assets/img/logos/logo-sm-light.png" alt="logo">
                                     </div>
                                 </div>
                                 <div class="col-md-8">

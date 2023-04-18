@@ -26,7 +26,7 @@
 		</section>
 		
 		<!-- Way To Use Section Start -->
-		<section class="use-section pt-100 pb-70">
+		<section class="use-section pt-100 pb-70" >
 			<div class="container">
 				<div class="section-title text-center">
 					<h2>Postulate</h2>
@@ -128,4 +128,13 @@ export default {
 	}
 }
 </script>
-<style></style>
+<style>
+.use-section{
+	background-image: url(@/assets/img/banner/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+}
+</style>
